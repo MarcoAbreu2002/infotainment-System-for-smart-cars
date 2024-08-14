@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/707687832239603863/1048573000548618360/classic_car.png">
+    <title> Sistema Infotainment </title>
+
+</head>
+
+<body class="background_ecraVolante">
+    <img src='https://cdn.discordapp.com/attachments/707687832239603863/1049440866693025933/goback.png' class="goBack" 
+    width='100px' height='100px' onclick="location.href='/ecraVolante'">
+    <img src="https://cdn.discordapp.com/attachments/707687832239603863/1049445554796625991/botaoChamada.png" class="botaoChamada" 
+    width="180px" height="120px" onclick="location.href='/ecraVolante/chamada'">
+    <img src="https://cdn.discordapp.com/attachments/707687832239603863/1049445555312541836/botaoVoice.png" class="botaoVoice" 
+    width="180px" height="120px" onclick="location.href='/ecraVolante'">
+    <img src="https://cdn.discordapp.com/attachments/707687832239603863/1049450279021584414/botaoSetaCima.png" class="botaoSetaCima" 
+    width="180px" height="120px" onclick="location.href='/ecraVolante/'"> <!--falta preencher o que faz ao clicar na seta para cima-->
+    <img src="https://cdn.discordapp.com/attachments/707687832239603863/1049450279474565191/botaoSetaBaixo.png" class="botaoSetaBaixo" 
+    width="170px" height="110px" onclick="location.href='/ecraVolante/'"> <!--falta preencher o que faz ao clicar na seta para baixo-->
+
+    <div class="ecra-volante">
+        <h3 class="lead">Listenning...</h3>
+    </div>
+
+
+    <script>
+        window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        const ecra = document.querySelector('.ecra-volante');
+        const recognition = new window.SpeechRecognition();
+        recognition.interimResults = true;
+        recognition.continuous = false;
+        recognition.lang = 'en-US';
+
+        recognition.addEventListener('result', (e) =>{
+            const command = Array.from(e.results)
+                .map(result => result[0])
+                .map(result => result.transcript)
+                .join('');
+
+            console.log(command);
+        
+
+       if(e.results[0].isFinal){
+            p = document.createElement('p');
+            p.classList.add('action');
+            p.innerText = command;
+            ecra.appendChild(p);
+
+        try{
+                    const res = fetch('http://localhost:3000/ecraVolante/voiceRecognition',{
+                        method: 'POST',
+                        body: JSON.stringify({command}),
+                        headers:{'Content-Type': 'application/json'}
+                    });
+                }catch(err){
+                    console.log(err);
+                }
+                console.log('VOLTEI');
+                location.assign('/ecraVolante/voiceRecognition/check');
+                
+/*
+                const cookieValueUser = document.cookie
+                    .split('; ')
+                    .find((row) => row.startsWith('user='))
+                    ?.split('=')[1];
+                
+
+                const cookieValueContacto = document.cookie
+                    .split('; ')
+                    .find((row) => row.startsWith('contacto='))
+                    ?.split('=')[1];
+                
+
+                const cookieValueUserAcao = document.cookie
+                    .split('; ')
+                    .find((row) => row.startsWith('acao='))
+                    ?.split('=')[1];
+                
+                console.log('COOKIE ACAO TESTE: ', cookieValueUserAcao);
+                console.log('COOKIE User TEST: ',cookieValueUser);
+                console.log('COOKIE Contacto TEST: ',cookieValueContacto);
+                console.log('COOKIE Gps TEST: ',cookieValueUserAcao);
+                
+                if(cookieValueUserAcao == 'call'){
+                    if(cookieValueUser != undefined){
+                        location.assign('/ecraVolante');
+                    }else if(cookieValueUser == undefined){
+                        location.assign('/ecraVolante/mustBeConnected');
+                    }
+                }
+                if(cookieValueUserAcao == 'GPS'){
+                    location.assign('/ecraVolante/ecraVolanteGPS');
+                }
+                */
+       }
+    })
+
+        recognition.start();
+    </script>
+
+</body>
+
+</html>

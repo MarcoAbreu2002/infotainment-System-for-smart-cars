@@ -1,0 +1,426 @@
+
+body{
+    margin: 0px;
+}
+
+.background {
+    background-image: url('https://cdn.discordapp.com/attachments/1026128172477059122/1049340814272241865/IMG_7473.jpg');
+    background-size: 215vh;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.background_ecraPrincipal {
+    background-image: url('https://cdn.discordapp.com/attachments/707687832239603863/1051633208803999744/ecraPrincipal_Zoom.png');
+    background-size: 215vh;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.background_ecraVolante {
+    background-image: url('https://cdn.discordapp.com/attachments/1026128172477059122/1049438878492278794/ecraVolant_Zoom.jpg');
+    background-size: 210vh;
+    background-position: center;
+    height: 80vh;
+    margin: 0;
+}
+    
+.goBack {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.goBack:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.ecraPrincipal {
+    position: absolute;
+    top: 480px;
+    left: 775px;  
+    opacity: 0; 
+}
+
+.ecraPrincipal:hover {
+    opacity: 1; 
+}
+
+.ecraPrincipal:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.ecraVolante {
+    position: absolute;
+    top: 400px;
+    left: 290px;  
+    opacity: 0; 
+}
+
+.ecraVolante:hover {
+    opacity: 1; 
+}
+
+.ecraVolante:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.botaoMEDIA {
+    position: absolute;
+    top: 310px;
+    left: 375px; 
+    transform: rotate(-1deg);
+    opacity: 0;
+}
+
+.botaoMEDIA:hover {
+    opacity: 1; 
+}
+
+
+.botaoRADIO {
+    position: absolute;
+    top: 220px;
+    left: 373px; 
+    transform: rotate(-1deg);
+    opacity: 0;
+}
+
+.botaoRADIO:hover {
+    opacity: 1; 
+}
+
+.botaoPHONE {
+    position: absolute;
+    top: 378px;
+    left: 378px; 
+    transform: rotate(-1deg);
+    opacity: 0;
+}
+
+.botaoPHONE:hover {
+    opacity: 1; 
+}
+
+.botaoGPS{
+    position: absolute;
+    right: 353px;
+    top: 303px;
+    opacity: 0;
+}
+
+.botaoGPS:hover {
+    opacity: 1; 
+}
+
+.botaoChamada {
+    position: absolute;
+    right: 384px;
+    bottom: 255px;
+    opacity: 0;
+}
+
+.botaoChamada:hover {
+    opacity: 1; 
+}
+
+.botaoVoice {
+    position: absolute;
+    right: 348px;
+    bottom: 145px;
+    opacity: 0;
+}
+
+.botaoVoice:hover {
+    opacity: 1; 
+}
+
+.botaoSETUP {
+    position: absolute;
+    right: 350px;
+    top: 225px;
+    opacity: 0;
+}
+
+.botaoSETUP:hover {
+    opacity: 1; 
+}
+
+.botaoSetaCima {
+    position: absolute;
+    right: 243px;
+    bottom: 235px;
+    opacity: 0;
+}
+
+.botaoSetaCima:hover {
+    opacity: 1; 
+}
+
+.botaoSetaBaixo {
+    position: absolute;
+    right: 205px;
+    bottom: 155px;
+    opacity: 0;
+}
+
+.botaoSetaBaixo:hover {
+    opacity: 1; 
+}
+
+.botaoPOWER {
+    position: absolute;
+    left: 330px;
+    bottom: 160px;
+    opacity: 0;
+}
+
+.botaoPOWER:hover {
+    opacity: 1;
+}
+
+.botaoCAR {
+    position: absolute;
+    right: 350px;
+    top: 371px;
+    opacity: 0;
+}
+
+.botaoCAR:hover {
+    opacity: 1;
+}
+
+.botaoMENU{
+    position: absolute;
+    right: 350px;
+    top: 430px;
+    opacity: 0;
+}
+
+.botaoMENU:hover{
+    opacity: 1;
+}
+
+#svgelem {
+    margin-left:50px;
+    margin-right:auto;
+    display:block;
+    text-align: center;
+}
+
+.ecra {
+    position: absolute;
+    right: 630px;
+    top: 250px;
+
+}
+
+.ecra-branco {
+    position: absolute;
+    right: 630px;
+    top: 250px;
+    background: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 3px;
+    height: 420px;
+    width: 650px;
+    
+}
+
+.ecra-preto {
+    position: absolute;
+    right: 630px;
+    top: 250px;
+    background: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 3px;
+    height: 420px;
+    width: 650px;
+    
+}
+
+
+#dp {
+    right: 200px;
+    top: 250px;
+    height: 100px;
+
+    
+}
+
+.ecra-volante {
+    position: absolute;
+    right: 890px;
+    top: 145px;
+    background: black;
+    padding: 15px;
+    border-radius: 3px;
+    height: 160px;
+    width: 120px;
+}
+
+.list-group{
+    height:250px; 
+    width:100%;
+    overflow:hidden; overflow-y:scroll;
+}
+
+.form-check-label{
+    color: white;
+}
+
+.lead{
+    color: white;
+}
+
+#destiny {
+    height: 420px;
+    width: 650px;
+    padding-left: 100px;
+}
+
+.calendar_default_main{
+    width: 100%;
+    left: 160px;
+}
+
+
+p.action{
+    color: white;
+}
+
+.botaoMenuPhone {
+    position: absolute;
+    right: 720px;
+    top: 332px;
+    opacity: 0;
+}
+
+.botaoMenuPhone:hover {
+    opacity: 1;
+}
+
+.botaoMenuGPS {
+    position: absolute;
+    right: 887px;
+    top: 484px;
+    opacity: 0;
+}
+
+.botaoMenuGPS:hover {
+    opacity: 1;
+}
+
+.botaoMenuCar {
+    position: absolute;
+    right: 720px;
+    top: 484px;
+    opacity: 0;
+}
+
+.botaoMenuCar:hover {
+    opacity: 1;
+}
+
+.botaoMenuSetup {
+    position: absolute;
+    right: 1051px;
+    top: 485px;
+    opacity: 0;
+}
+
+.botaoMenuSetup:hover {
+    opacity: 1;
+}
+
+
+.botaoSeta {
+    position: absolute;
+    right: 648px;
+    top: 448px;
+    opacity: 0;
+}
+
+.botaoSeta:hover {
+    opacity: 1;
+}
+
+.botaoSeta2 {
+    position: absolute;
+    right: 1204px;
+    top: 450px;
+    opacity: 0;
+}
+
+.botaoSeta2:hover {
+    opacity: 1;
+}
+
+.botaoWi-fi {
+    position: absolute;
+    right: 998px;
+    top: 411px;
+    opacity: 0;
+}
+
+.botaoWi-fi:hover {
+    opacity: 1;
+}
+
+.botaoCalendario {
+    position: absolute;
+    right: 777px;
+    top: 408px;
+    opacity: 0;
+}
+
+.botaoCalendario:hover {
+    opacity: 1;
+}
+
+
+.botaoMenuRadio {
+    position: absolute;
+    right: 1051px;
+    top: 332px;
+    opacity: 0;
+}
+
+.botaoMenuRadio:hover {
+    opacity: 1;
+}
+
+.botaoMenuMedia {
+    position: absolute;
+    right: 887px;
+    top: 332px;
+    opacity: 0;
+}
+
+.botaoMenuMedia:hover {
+    opacity: 1;
+}
+
+.ecramarchaatras {
+    position: absolute;
+    top : 775px;
+    left: 850px;
+    opacity: 0;
+}
+
+.ecramarchaatras:hover {
+    opacity: 1; 
+}
+
+.botaoWIFI {
+    position: absolute;
+    left: 360px;
+    top: 420px;
+    opacity: 0;
+}
+
+.botaoWIFI:hover {
+    opacity: 1;
+}
